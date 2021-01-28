@@ -1,0 +1,5 @@
+{
+    "phpcs.enable": false,
+    "phpcbf.enable": false,
+    "phpcs.showWarnings": false
+}
