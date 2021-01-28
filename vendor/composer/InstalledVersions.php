@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '154989bec8021f39f7d851d35f775bbcceef1c1c',
+    'reference' => 'eaf945095c6e94aa66cd6bc3a3355e0f294d61a1',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -471,6 +471,15 @@ private static $installed = array (
       ),
       'reference' => '05da44d6823c2923597519ac10151f5827a24f80',
     ),
+    'laravel/homestead' => 
+    array (
+      'pretty_version' => 'v11.4.0',
+      'version' => '11.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '41a628deed9b601ee80689cf3ae0815195b5040f',
+    ),
     'laravel/laravel' => 
     array (
       'pretty_version' => 'dev-main',
@@ -478,7 +487,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '154989bec8021f39f7d851d35f775bbcceef1c1c',
+      'reference' => 'eaf945095c6e94aa66cd6bc3a3355e0f294d61a1',
     ),
     'laravel/sail' => 
     array (
@@ -1276,6 +1285,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '72ca213014a92223a5d18651ce79ef441c12b694',
+    ),
+    'symfony/yaml' => 
+    array (
+      'pretty_version' => 'v5.2.2',
+      'version' => '5.2.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6bb8b36c6dea8100268512bf46e858c8eb5c545e',
     ),
     'theseer/tokenizer' => 
     array (

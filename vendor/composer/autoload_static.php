@@ -77,6 +77,7 @@ class ComposerStaticInit1df26446001e95bc0fb8c6a2efdd273c
             'Symfony\\Contracts\\Service\\' => 26,
             'Symfony\\Contracts\\HttpClient\\' => 29,
             'Symfony\\Contracts\\EventDispatcher\\' => 34,
+            'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\String\\' => 25,
@@ -130,6 +131,7 @@ class ComposerStaticInit1df26446001e95bc0fb8c6a2efdd273c
             'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
             'Laravel\\Sail\\' => 13,
+            'Laravel\\Homestead\\' => 18,
             'LaravelFrontendPresets\\Tall\\' => 28,
         ),
         'I' => 
@@ -266,6 +268,10 @@ class ComposerStaticInit1df26446001e95bc0fb8c6a2efdd273c
         'Symfony\\Contracts\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts',
+        ),
+        'Symfony\\Component\\Yaml\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
         'Symfony\\Component\\VarDumper\\' => 
         array (
@@ -406,6 +412,10 @@ class ComposerStaticInit1df26446001e95bc0fb8c6a2efdd273c
         'Laravel\\Sail\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
+        ),
+        'Laravel\\Homestead\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/homestead/src',
         ),
         'LaravelFrontendPresets\\Tall\\' => 
         array (
@@ -2544,6 +2554,14 @@ class ComposerStaticInit1df26446001e95bc0fb8c6a2efdd273c
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'LaravelFrontendPresets\\Tall\\TallPreset' => __DIR__ . '/..' . '/laravel-frontend-presets/tall/src/TallPreset.php',
         'LaravelFrontendPresets\\Tall\\TallServiceProvider' => __DIR__ . '/..' . '/laravel-frontend-presets/tall/src/TallServiceProvider.php',
+        'Laravel\\Homestead\\MakeCommand' => __DIR__ . '/..' . '/laravel/homestead/src/MakeCommand.php',
+        'Laravel\\Homestead\\Settings\\HomesteadSettings' => __DIR__ . '/..' . '/laravel/homestead/src/Settings/HomesteadSettings.php',
+        'Laravel\\Homestead\\Settings\\JsonSettings' => __DIR__ . '/..' . '/laravel/homestead/src/Settings/JsonSettings.php',
+        'Laravel\\Homestead\\Settings\\YamlSettings' => __DIR__ . '/..' . '/laravel/homestead/src/Settings/YamlSettings.php',
+        'Laravel\\Homestead\\Traits\\GeneratesSlugs' => __DIR__ . '/..' . '/laravel/homestead/src/Traits/GeneratesSlugs.php',
+        'Laravel\\Homestead\\WslApplyFeatures' => __DIR__ . '/..' . '/laravel/homestead/src/WslApplyFeatures.php',
+        'Laravel\\Homestead\\WslCreateDatabaseCommand' => __DIR__ . '/..' . '/laravel/homestead/src/WslCreateDatabaseCommand.php',
+        'Laravel\\Homestead\\WslCreateSiteCommand' => __DIR__ . '/..' . '/laravel/homestead/src/WslCreateSiteCommand.php',
         'Laravel\\Sail\\SailServiceProvider' => __DIR__ . '/..' . '/laravel/sail/src/SailServiceProvider.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
@@ -5123,6 +5141,18 @@ class ComposerStaticInit1df26446001e95bc0fb8c6a2efdd273c
         'Symfony\\Component\\VarDumper\\Server\\DumpServer' => __DIR__ . '/..' . '/symfony/var-dumper/Server/DumpServer.php',
         'Symfony\\Component\\VarDumper\\Test\\VarDumperTestTrait' => __DIR__ . '/..' . '/symfony/var-dumper/Test/VarDumperTestTrait.php',
         'Symfony\\Component\\VarDumper\\VarDumper' => __DIR__ . '/..' . '/symfony/var-dumper/VarDumper.php',
+        'Symfony\\Component\\Yaml\\Command\\LintCommand' => __DIR__ . '/..' . '/symfony/yaml/Command/LintCommand.php',
+        'Symfony\\Component\\Yaml\\Dumper' => __DIR__ . '/..' . '/symfony/yaml/Dumper.php',
+        'Symfony\\Component\\Yaml\\Escaper' => __DIR__ . '/..' . '/symfony/yaml/Escaper.php',
+        'Symfony\\Component\\Yaml\\Exception\\DumpException' => __DIR__ . '/..' . '/symfony/yaml/Exception/DumpException.php',
+        'Symfony\\Component\\Yaml\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/yaml/Exception/ExceptionInterface.php',
+        'Symfony\\Component\\Yaml\\Exception\\ParseException' => __DIR__ . '/..' . '/symfony/yaml/Exception/ParseException.php',
+        'Symfony\\Component\\Yaml\\Exception\\RuntimeException' => __DIR__ . '/..' . '/symfony/yaml/Exception/RuntimeException.php',
+        'Symfony\\Component\\Yaml\\Inline' => __DIR__ . '/..' . '/symfony/yaml/Inline.php',
+        'Symfony\\Component\\Yaml\\Parser' => __DIR__ . '/..' . '/symfony/yaml/Parser.php',
+        'Symfony\\Component\\Yaml\\Tag\\TaggedValue' => __DIR__ . '/..' . '/symfony/yaml/Tag/TaggedValue.php',
+        'Symfony\\Component\\Yaml\\Unescaper' => __DIR__ . '/..' . '/symfony/yaml/Unescaper.php',
+        'Symfony\\Component\\Yaml\\Yaml' => __DIR__ . '/..' . '/symfony/yaml/Yaml.php',
         'Symfony\\Contracts\\EventDispatcher\\Event' => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts/Event.php',
         'Symfony\\Contracts\\EventDispatcher\\EventDispatcherInterface' => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts/EventDispatcherInterface.php',
         'Symfony\\Contracts\\HttpClient\\ChunkInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/ChunkInterface.php',
