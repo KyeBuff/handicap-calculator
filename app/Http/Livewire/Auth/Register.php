@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Auth;
 
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\Player;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
@@ -37,11 +38,18 @@ class Register extends Component
             'password' => Hash::make($this->password),
         ]);
 
+        $player = Player::create([
+            'user_id' => $user->id,
+        ]);
+
+        $user->player_id = $player->id;
+        $user->save();
+
         event(new Registered($user));
 
         Auth::login($user, true);
 
-        return redirect()->intended(route('home'));
+        return redirect()->intended(route('handicap-form'));
     }
 
     public function render()

@@ -44,6 +44,6 @@ class User extends Authenticatable
 
     public function player()
     {
-        return $this->hasOne('App\Player')->withDefault();
+        return $this->hasOne('App\Models\Player')->withDefault();
     }
 }

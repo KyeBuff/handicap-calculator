@@ -15,10 +15,17 @@ class CreatePlayersTable extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
-            $table->float('handicap_index', 3, 1);
+            $table->float('handicap_index', 3, 1)
+                ->nullable();
             $table->foreignId('user_id')
                 ->constrained('users');
             $table->timestamps();
+        });
+
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignId('player_id')
+                ->nullable()
+                ->constrained('players');
         });
     }
 
