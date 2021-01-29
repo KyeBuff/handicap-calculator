@@ -36,6 +36,9 @@ class Scorecard extends Component
         ]);
 
         $user->player->updateHandicap($this->points);
+
+        $this->emit('scoreAdded');
+
     }
 
     public function render()

@@ -9,6 +9,8 @@ use App\Models\Score;
 
 class Leaderboard extends Component
 {
+    protected $listeners = ['scoreAdded' => 'render'];
+
     public function render()
     {
         $players = Player::all();
