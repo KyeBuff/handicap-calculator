@@ -22,14 +22,16 @@ class Leaderboard extends Component
                 return $player;
             }
 
-            $player->points = collect($all_scores)->reduce(function($total_score, $score) {
-                return $total_score += $score->points;
-            }, 0);
-
             $player->average_points = collect($all_scores)->reduce(function($total_score, $score) {
                 return $total_score += $score->points;
             }, 0) / collect($all_scores)->count();
+
+            $player->average_strokes = collect($all_scores)->reduce(function($total_score, $score) {
+                return $total_score += $score->strokes;
+            }, 0) / collect($all_scores)->count();
+
             return $player;
+
         });
 
         return view('livewire.players.leaderboard', ['players' => $players])->extends('layouts.auth');
