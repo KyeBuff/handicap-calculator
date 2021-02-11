@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\Score;
 class Player extends Model
 {
     use HasFactory;
@@ -44,7 +44,7 @@ class Player extends Model
         return $this->hasOne('App\Models\User')->withDefault();
     }
 
-    public function updateHandicap(int $points)
+    public function updateHandicap(int $points): Model
     {
         $band = collect(self::$handicap_bands)->filter(function($band) {
             return $this->handicap_index < $band['handicap_index'];
@@ -64,5 +64,24 @@ class Player extends Model
         }
 
         $this->save();
+    }
+
+    public function getStats(): Model
+    {
+        $all_scores = Score::where('player_id', $this->id)->get();
+
+        if (collect($all_scores)->count() <= 0) {
+            return $this;
+        }
+
+        $this->average_points = collect($all_scores)->reduce(function($total_score, $score) {
+            return $total_score += $score->points;
+        }, 0) / collect($all_scores)->count();
+
+        $this->average_strokes = collect($all_scores)->reduce(function($total_score, $score) {
+            return $total_score += $score->strokes;
+        }, 0) / collect($all_scores)->count();
+
+        return $player;
     }
 }

@@ -18,6 +18,11 @@ class Scorecard extends Component
     /** @var string */
     public $course = '';
 
+    public function welcome()
+    {
+        return view('welcome');
+    }
+
     public function log()
     {
         $this->validate([

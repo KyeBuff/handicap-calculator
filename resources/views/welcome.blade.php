@@ -27,7 +27,13 @@
                 </div>
             @endif
         </div>
-        <livewire:players.scorecard />
+        <section class="flex justify-between w-8/12 m-auto flex-wrap mt-0">
+            <a class="w-full" href="{{ route('home') }}">
+                <x-logo class="w-auto h-16 mx-auto text-indigo-600" />
+            </a>
+            <x-player-stats :player=$player :name=$name />
+            <livewire:players.scorecard />
+        </section>
         <livewire:players.leaderboard />
     </div>
 @endsection
