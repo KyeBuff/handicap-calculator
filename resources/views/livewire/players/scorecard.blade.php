@@ -1,4 +1,4 @@
-<div>
+<div class="flex-1">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 class="my-4 text-xl font-extrabold text-center text-gray-900 leading-9">
             Submit a new score

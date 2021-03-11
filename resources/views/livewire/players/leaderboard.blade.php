@@ -1,4 +1,4 @@
-<section class="flex flex-col">
+<section class="flex flex-col justify-between w-8/12 m-auto flex-wrap mt-0">
 @foreach ($players as $player)
 
     <div class="flex justify-between">

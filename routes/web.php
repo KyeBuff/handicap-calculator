@@ -23,7 +23,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Welcome::class)->name('home');
+Route::get('/', Login::class)->name('home');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/', Welcome::class)->name('home');
+});
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)

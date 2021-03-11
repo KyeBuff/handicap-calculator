@@ -64,6 +64,8 @@ class Player extends Model
         }
 
         $this->save();
+
+        return $this;
     }
 
     public function getStats(): Model
