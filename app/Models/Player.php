@@ -82,6 +82,6 @@ class Player extends Model
             return $total_score += $score->strokes;
         }, 0) / collect($all_scores)->count();
 
-        return $player;
+        return $this;
     }
 }
