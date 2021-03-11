@@ -26,7 +26,7 @@
             </div>
         </div>
         @auth
-            <section class="flex justify-between w-8/12 m-auto flex-wrap mt-0">
+            <section class="flex flex-col md:flex-row justify-between w-8/12 m-auto flex-wrap mt-0">
                 <a class="w-full" href="{{ route('home') }}">
                     <x-logo class="w-auto h-16 mx-auto text-indigo-600" />
                 </a>
