@@ -18,17 +18,11 @@ class Leaderboard extends Component
         $players = collect($players)->map(function($player) {
             $all_scores = Score::where('player_id', $player->id)->get();
 
-            if (collect($all_scores)->count() <= 0) {
+            if ($all_scores->count() <= 0) {
                 return $player;
             }
 
-            $player->average_points = collect($all_scores)->reduce(function($total_score, $score) {
-                return $total_score += $score->points;
-            }, 0) / collect($all_scores)->count();
-
-            $player->average_strokes = collect($all_scores)->reduce(function($total_score, $score) {
-                return $total_score += $score->strokes;
-            }, 0) / collect($all_scores)->count();
+            $player = $player->getStats();
 
             return $player;
 

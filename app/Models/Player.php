@@ -72,17 +72,20 @@ class Player extends Model
     {
         $all_scores = Score::where('player_id', $this->id)->get();
 
-        if (collect($all_scores)->count() <= 0) {
+        if ($all_scores->count() <= 0) {
             return $this;
         }
 
-        $this->average_points = collect($all_scores)->reduce(function($total_score, $score) {
+        $this->average_points = $all_scores->reduce(function($total_score, $score) {
             return $total_score += $score->points;
-        }, 0) / collect($all_scores)->count();
+        }, 0) / $all_scores->count();
 
-        $this->average_strokes = collect($all_scores)->reduce(function($total_score, $score) {
+        $this->average_strokes = $all_scores->reduce(function($total_score, $score) {
             return $total_score += $score->strokes;
-        }, 0) / collect($all_scores)->count();
+        }, 0) / $all_scores->count();
+
+        $this->best_points = $all_scores->pluck('points')->sortDesc()->first();
+        $this->best_strokes = $all_scores->pluck('strokes')->sort()->first();
 
         return $this;
     }

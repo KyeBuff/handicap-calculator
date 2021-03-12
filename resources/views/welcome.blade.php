@@ -26,14 +26,11 @@
             </div>
         </div>
         @auth
-            <section class="flex flex-col md:flex-row justify-between w-8/12 m-auto flex-wrap mt-0">
-                <a class="w-full" href="{{ route('home') }}">
-                    <x-logo class="w-auto h-16 mx-auto text-indigo-600" />
-                </a>
+            <section class="flex flex-col md:flex-row justify-between w-full md:w-8/12 m-auto flex-wrap mt-0 px-8">
                 <livewire:player-stats />
                 <livewire:players.scorecard />
+                <livewire:players.leaderboard />
             </section>
-            <livewire:players.leaderboard />
         @else
             blah
         @endauth
