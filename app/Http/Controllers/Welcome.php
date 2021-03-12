@@ -8,18 +8,8 @@ use App\Models\Player;
 
 class Welcome extends Controller
 {
-
-    public $player = null;
-
     public function __invoke()
     {
-        $user = Auth::user();
-
-        if (Auth::check()) {
-            $player = Player::find($user->player_id);
-            $this->player = $player->getStats();
-        }
-
-        return view('welcome', ['name' => $user ? $user->name : '', 'player' => $this->player]);
+        return view('welcome');
     }
 }

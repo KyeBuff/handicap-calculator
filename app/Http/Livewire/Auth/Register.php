@@ -49,7 +49,7 @@ class Register extends Component
 
         Auth::login($user, true);
 
-        return redirect()->intended(route('handicap-form'));
+        return redirect()->to('/handicap-form');
     }
 
     public function render()

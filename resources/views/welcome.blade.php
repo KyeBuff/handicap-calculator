@@ -30,7 +30,7 @@
                 <a class="w-full" href="{{ route('home') }}">
                     <x-logo class="w-auto h-16 mx-auto text-indigo-600" />
                 </a>
-                <x-player-stats :player=$player :name=$name />
+                <livewire:player-stats />
                 <livewire:players.scorecard />
             </section>
             <livewire:players.leaderboard />
