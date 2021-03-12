@@ -1,11 +1,11 @@
-<div class="flex-1 w-full md:w-auto">
-    <div class="sm:mx-auto sm:w-full sm:max-w-md">
+<div class="flex-1 w-full">
+    <div class="sm:mx-auto sm:w-full">
         <h2 class="my-4 text-xl font-extrabold text-center text-gray-900 leading-9">
             Submit a new score
         </h2>
     </div>
 
-    <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="sm:mx-auto sm:w-full">
         <div class="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10">
             <form wire:submit.prevent="log">
                 <div>
