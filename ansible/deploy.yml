@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  vars_files:
+    - vars/default.yml
+
+  tasks:
+    - name: Clone repo
+      ansible.builtin.git:
+        repo: "https://github.com/KyeBuff/handicap-calculator.git"
+        dest: "/var/www/release"
+        version: "master"
