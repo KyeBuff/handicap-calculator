@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Score;
+use App\Models\HandicapHistory;
 class Player extends Model
 {
     use HasFactory;
@@ -68,6 +69,11 @@ class Player extends Model
         }
 
         $this->save();
+
+        HandicapHistory::create([
+            'handicap_index' => $this->handicap_index,
+            'player_id' => $this->id
+        ]);
 
         return $this;
     }
