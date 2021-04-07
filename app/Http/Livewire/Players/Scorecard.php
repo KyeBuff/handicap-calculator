@@ -44,6 +44,7 @@ class Scorecard extends Component
 
         $this->emit('scoreAdded');
 
+        $this->reset();
     }
 
     public function render()
