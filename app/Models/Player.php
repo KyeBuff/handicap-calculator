@@ -63,6 +63,10 @@ class Player extends Model
             }
         }
 
+        if ($this->handicap_index > 28) {
+            $this->handicap_index = 28;
+        }
+
         $this->save();
 
         return $this;
