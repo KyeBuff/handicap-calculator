@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Players;
 use Livewire\Component;
 use App\Models\Course;
 use App\Models\Score;
+use App\Models\League;
 use Illuminate\Support\Facades\Auth;
 
 class Scorecard extends Component
@@ -17,6 +18,9 @@ class Scorecard extends Component
 
     /** @var string */
     public $course = '';
+
+    /** @var boolean */
+    public $isMasters = false;
 
     public function welcome()
     {
@@ -43,6 +47,13 @@ class Scorecard extends Component
         $user->player->updateHandicap($this->points);
 
         $this->emit('scoreAdded');
+
+        if ($this->isMasters) {
+            League::create([
+                'points' => $this->points,
+                'player_id' => $user->player->id
+            ]);
+        }
 
         $this->reset();
     }
