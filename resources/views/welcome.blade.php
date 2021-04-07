@@ -29,8 +29,8 @@
             <section class="flex flex-col md:flex-row justify-between w-full md:w-8/12 m-auto flex-wrap mt-0 px-8">
                 <livewire:player-stats />
                 <livewire:players.scorecard />
-                <livewire:players.leaderboard />
                 <livewire:players.league />
+                <livewire:players.leaderboard />
             </section>
         @else
             blah
