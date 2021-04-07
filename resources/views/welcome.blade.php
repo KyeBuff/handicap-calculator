@@ -30,6 +30,7 @@
                 <livewire:player-stats />
                 <livewire:players.scorecard />
                 <livewire:players.leaderboard />
+                <livewire:players.league />
             </section>
         @else
             blah
