@@ -32,6 +32,8 @@ class League extends Component
 
         });
 
+        $players = $players->sortByDesc('total');
+
         return view('livewire.players.league', ['players' => $players])->extends('layouts.auth');
     }
 }

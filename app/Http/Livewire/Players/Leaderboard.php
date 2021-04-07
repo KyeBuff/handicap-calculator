@@ -28,6 +28,9 @@ class Leaderboard extends Component
 
         });
 
+        $players = $players->sortBy('handicap_index');
+
+
         return view('livewire.players.leaderboard', ['players' => $players])->extends('layouts.auth');
     }
 }
